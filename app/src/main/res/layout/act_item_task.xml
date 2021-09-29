@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_card">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_taskName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Task Name"
+            android:textSize="24dp"
+            android:textColor="@color/design_default_color_primary_dark"/>
+        
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:src="@drawable/ic_delete"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            app:tint="#EA0F0F" />
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:src="@drawable/ic_edit"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            app:tint="#C59915"/>
+
+        <ImageView
+            android:id="@+id/iv_detail"
+            android:src="@drawable/ic_edit"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            app:tint="#C59915"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

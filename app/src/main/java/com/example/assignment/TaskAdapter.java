@@ -44,13 +44,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskHolder> {
 
     public class TaskHolder extends RecyclerView.ViewHolder {
         private TextView tvTaskName;
-        private ImageView ivDelete, ivEdit;
+        private ImageView ivDelete, ivEdit, ivDetail;
         public TaskHolder(@NonNull View itemView) {
             super(itemView);
 
             tvTaskName = itemView.findViewById(R.id.tv_taskName);
             ivDelete = itemView.findViewById(R.id.iv_delete);
             ivEdit = itemView.findViewById(R.id.iv_edit);
+            ivDetail = itemView.findViewById(R.id.iv_detail);
 
             View.OnClickListener click = new View.OnClickListener() {
                 @Override
@@ -67,6 +68,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskHolder> {
 
             ivDelete.setOnClickListener(click);
             ivEdit.setOnClickListener(click);
+            ivDetail.setOnClickListener(click);
 
         }
     }

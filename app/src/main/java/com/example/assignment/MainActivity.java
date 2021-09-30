@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, OnMainActCallback {
     private BottomNavigationView bottomNavigationView;
 
@@ -34,7 +36,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             FragmentFactory.getInstance().showFragment(ListTaskFrg.class.getName(), this, getSupportFragmentManager(), R.id.ln_main);
         } else if (item.getItemId() == R.id.bottom_add) {
             FragmentFactory.getInstance().showFragment(AddTaskFrg.class.getName(), this, getSupportFragmentManager(), R.id.ln_main);
+        }else if (item.getItemId() == R.id.bottom_search) {
+            FragmentFactory.getInstance().showFragment(SearchFrg.class.getName(), this, getSupportFragmentManager(), R.id.ln_main);
         }
-        return false;
+        return true;
+    }
+
+    @Override
+    public void showListDataSearch(List<Task> taskList) {
+        FragmentFactory.getInstance().showFragment(ListTaskFrg.class.getName(), this, getSupportFragmentManager(), R.id.ln_main);
+//        ListTaskFrg frg = ((ListTaskFrg) FragmentFactory.getInstance().getFragment(ListTaskFrg.class.getName(), this));
+//        frg.getAllDataSearch(taskList);
+        bottomNavigationView.getMenu().findItem(R.id.bottom_list).setChecked(true);
     }
 }

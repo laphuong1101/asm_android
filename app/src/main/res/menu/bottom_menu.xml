@@ -2,4 +2,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/bottom_list" android:title="List" android:icon="@drawable/ic_list"/>
     <item android:id="@+id/bottom_add" android:title="Add" android:icon="@drawable/ic_add"/>
+    <item android:id="@+id/bottom_search" android:title="Add" android:icon="@drawable/ic_detail"/>
 </menu>

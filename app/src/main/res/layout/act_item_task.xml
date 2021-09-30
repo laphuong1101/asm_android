@@ -40,7 +40,7 @@
 
         <ImageView
             android:id="@+id/iv_detail"
-            android:src="@drawable/ic_edit"
+            android:src="@drawable/ic_detail"
             android:layout_width="56dp"
             android:layout_height="match_parent"
             android:padding="10dp"
